@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:atmega88-breakout-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -13,10 +14,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Entry Wire Line
-	-1150 550  -1050 650 
 $Comp
-L MCU_Microchip_ATmega:ATmega88PA-AU U1
+L atmega88-breakout-rescue:ATmega88PA-AU-MCU_Microchip_ATmega U1
 U 1 1 5FC75EB9
 P 5200 4000
 F 0 "U1" H 5200 2411 50  0000 C CNN
@@ -266,8 +265,6 @@ Text Label 5900 5100 0    50   ~ 0
 D6
 Text Label 5900 5200 0    50   ~ 0
 D7
-Wire Wire Line
-	5800 4500 6050 4500
 Wire Wire Line
 	6050 4600 5800 4600
 Wire Wire Line
@@ -625,6 +622,47 @@ NoConn ~ 7500 3050
 NoConn ~ 7500 3150
 NoConn ~ 7500 3250
 NoConn ~ 7500 3350
+$Comp
+L Device:R_Small R1
+U 1 1 5FE27389
+P 6350 4850
+F 0 "R1" H 6409 4896 50  0000 L CNN
+F 1 "R_Small" H 6409 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6350 4850 50  0001 C CNN
+F 3 "~" H 6350 4850 50  0001 C CNN
+	1    6350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small D1
+U 1 1 5FE274C0
+P 6350 5100
+F 0 "D1" V 6396 5032 50  0000 R CNN
+F 1 "LED_Small" V 6305 5032 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" V 6350 5100 50  0001 C CNN
+F 3 "~" V 6350 5100 50  0001 C CNN
+	1    6350 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5FE2758A
+P 6350 5250
+F 0 "#PWR08" H 6350 5000 50  0001 C CNN
+F 1 "GND" H 6355 5077 50  0000 C CNN
+F 2 "" H 6350 5250 50  0001 C CNN
+F 3 "" H 6350 5250 50  0001 C CNN
+	1    6350 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5250 6350 5200
+Wire Wire Line
+	6350 5000 6350 4950
+Wire Wire Line
+	6350 4500 6350 4750
+Wire Wire Line
+	5800 4500 6350 4500
 Wire Bus Line
 	6450 3800 6450 4550
 Wire Bus Line
