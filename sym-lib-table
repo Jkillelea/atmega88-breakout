@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name atmega88-breakout-rescue)(type Legacy)(uri ${KIPRJMOD}/atmega88-breakout-rescue.lib)(options "")(descr ""))
+)
